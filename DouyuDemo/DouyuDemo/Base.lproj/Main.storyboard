@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Hke-wY-Un0">
             <objects>
-                <tabBarController id="BB6-pa-RNf" sceneMemberID="viewController">
+                <tabBarController id="BB6-pa-RNf" customClass="MainViewController" customModule="DouyuDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VJL-n2-0fM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,7 +37,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7T-JU-R5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8973" y="-2924"/>
+            <point key="canvasLocation" x="-8317" y="-3307"/>
         </scene>
         <!--Live-->
         <scene sceneID="lqy-em-wqz">
@@ -47,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDX-gy-w8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7466" y="-2924"/>
+            <point key="canvasLocation" x="-7353" y="-3133"/>
         </scene>
         <!--Follow-->
         <scene sceneID="09C-CQ-oTM">
@@ -57,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpa-7A-pmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6018" y="-2924"/>
+            <point key="canvasLocation" x="-6397" y="-3133"/>
         </scene>
         <!--Profile-->
         <scene sceneID="i4C-IZ-qLU">
@@ -67,7 +67,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7B-aC-dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4749" y="-2924"/>
+            <point key="canvasLocation" x="-5466" y="-3307"/>
         </scene>
     </scenes>
 </document>
