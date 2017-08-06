@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A06C3B91F36A32400F361D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A06C3B81F36A32400F361D8 /* Assets.xcassets */; };
+		5A06C3BC1F36AB4600F361D8 /* UIBarButtomItem_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06C3BB1F36AB4600F361D8 /* UIBarButtomItem_Extension.swift */; };
 		5A4389801F35D61E0079CACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A43897F1F35D61E0079CACC /* AppDelegate.swift */; };
-		5A4389871F35D61E0079CACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4389861F35D61E0079CACC /* Assets.xcassets */; };
 		5A43898A1F35D61E0079CACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4389881F35D61E0079CACC /* LaunchScreen.storyboard */; };
 		5A4389AC1F3686C30079CACC /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4389AB1F3686C30079CACC /* Live.storyboard */; };
 		5A4389AE1F3686CB0079CACC /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4389AD1F3686CB0079CACC /* Follow.storyboard */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A06C3B81F36A32400F361D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A06C3BB1F36AB4600F361D8 /* UIBarButtomItem_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtomItem_Extension.swift; sourceTree = "<group>"; };
 		5A43897C1F35D61E0079CACC /* DouyuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouyuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A43897F1F35D61E0079CACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A4389861F35D61E0079CACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A4389891F35D61E0079CACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A43898B1F35D61E0079CACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A4389AB1F3686C30079CACC /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A06C3BA1F36AB0800F361D8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A06C3BB1F36AB4600F361D8 /* UIBarButtomItem_Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5A4389731F35D61D0079CACC = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +76,7 @@
 			children = (
 				5A4389911F35D8500079CACC /* Class */,
 				5A43897F1F35D61E0079CACC /* AppDelegate.swift */,
-				5A4389861F35D61E0079CACC /* Assets.xcassets */,
+				5A06C3B81F36A32400F361D8 /* Assets.xcassets */,
 				5A4389881F35D61E0079CACC /* LaunchScreen.storyboard */,
 				5A43898B1F35D61E0079CACC /* Info.plist */,
 			);
@@ -133,6 +143,7 @@
 		5A4389971F35D8500079CACC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5A06C3BA1F36AB0800F361D8 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -245,9 +256,9 @@
 			files = (
 				5A4389BB1F3688DA0079CACC /* Home.storyboard in Resources */,
 				5A43898A1F35D61E0079CACC /* LaunchScreen.storyboard in Resources */,
-				5A4389871F35D61E0079CACC /* Assets.xcassets in Resources */,
 				5A4389AC1F3686C30079CACC /* Live.storyboard in Resources */,
 				5A4389B91F3688D00079CACC /* Main.storyboard in Resources */,
+				5A06C3B91F36A32400F361D8 /* Assets.xcassets in Resources */,
 				5A4389B01F3686D50079CACC /* Profile.storyboard in Resources */,
 				5A4389AE1F3686CB0079CACC /* Follow.storyboard in Resources */,
 			);
@@ -263,6 +274,7 @@
 				5A4389801F35D61E0079CACC /* AppDelegate.swift in Sources */,
 				5A4389B51F3687C70079CACC /* MainViewController.swift in Sources */,
 				5A4389B71F3688710079CACC /* HomeViewController.swift in Sources */,
+				5A06C3BC1F36AB4600F361D8 /* UIBarButtomItem_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,7 @@
 				5A4389901F35D61E0079CACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
