@@ -13,15 +13,16 @@ fileprivate let kTitleViewH: CGFloat = 40
 class HomeViewController: UIViewController {
     
     //MARK:- 懒加载属性
-    fileprivate lazy var pageTitleView: PageTitleView = {
+    fileprivate lazy var pageTitleView: PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         
         return titleView
     }()
     
-    fileprivate lazy var pageContentVIew: PageContentView = {
+    fileprivate lazy var pageContentVIew: PageContentView = {[weak self] in
         // 1. 确定内容frame
         let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
@@ -30,12 +31,17 @@ class HomeViewController: UIViewController {
         var childrenViewControls = [UIViewController]()
         for _ in 0..<4 {
             let viewcontroller = UIViewController()
-            viewcontroller.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            viewcontroller.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)),
+                                                          g: CGFloat(arc4random_uniform(255)),
+                                                          b: CGFloat(arc4random_uniform(255)))
             
             childrenViewControls.append(viewcontroller)
         }
         
-        let contentView = PageContentView(frame: contentFrame, childrenViewControllers: childrenViewControls, parentViewController: self)
+        let contentView = PageContentView(frame: contentFrame,
+                                          childrenViewControllers: childrenViewControls,
+                                          parentViewController: self)
+        contentView.delegate = self
         return contentView
     }()
 
@@ -80,5 +86,18 @@ extension HomeViewController {
         
         navigationItem.leftBarButtonItem = logoItem
         navigationItem.rightBarButtonItems = [hisrotyItem, searchItem, qrcodeItem]
+    }
+}
+
+//MARK:- 实现协议
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectIndex index: Int) {
+        pageContentVIew.setCurrentIndex(currentIndex: index)
+    }
+}
+
+extension HomeViewController: PageContentViewDelegate{
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgess(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
