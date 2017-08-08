@@ -174,8 +174,8 @@ extension PageTitleView {
         
         // 3.3 设置targetLabel
         targetLabel.textColor = UIColor(r: kNormalLabelColor.r + colorDelta.deltaR * progress,
-                                       g: kNormalLabelColor.g + colorDelta.deltaG * progress,
-                                       b: kNormalLabelColor.b + colorDelta.deltaB * progress)
+                                        g: kNormalLabelColor.g + colorDelta.deltaG * progress,
+                                        b: kNormalLabelColor.b + colorDelta.deltaB * progress)
         
         // 4. 记录最新的index
         currentLabelIndex = targetIndex
