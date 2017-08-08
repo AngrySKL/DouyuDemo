@@ -103,6 +103,8 @@ extension PageContentView: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 对titleview上的标签进行点击会造成collectionview的滚动，因此，会进入这个方法，
+        // 但是此时，不应该再执行下面的逻辑了，否则会造成对滑动逻辑的重复执行
         if isForbidScrollDelegate { return }
         
         // 1. 获取数据
@@ -144,6 +146,7 @@ extension PageContentView: UICollectionViewDelegate {
 
 //MARK:- 对外接口
 extension PageContentView {
+    // 当点击titleview上的label时执行
     public func setCurrentIndex(currentIndex: Int) {
         // 1. 需要禁止执行代理方法
         isForbidScrollDelegate = true
